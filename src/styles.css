@@ -58,3 +58,17 @@ html {
 .alert {
   text-align: center;
 }
+
+ol li {
+  text-align: justify;
+}
+
+p {
+  text-align: justify;
+}
+
+najon {
+  font-weight: bold;
+  color: red;
+  text-transform: uppercase;
+}
