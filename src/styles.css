@@ -59,8 +59,12 @@ html {
   text-align: center;
 }
 
-ol li {
-  text-align: justify;
+#valuesList {
+  padding-left: unset;
+}
+
+b {
+  font-weight: bold;
 }
 
 p {
@@ -71,4 +75,16 @@ najon {
   font-weight: bold;
   color: red;
   text-transform: uppercase;
+}
+
+.language-selector {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+#navBarList {
+  display: flex; 
+  align-items: center;
 }

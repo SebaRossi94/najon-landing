@@ -86,6 +86,14 @@
     </ul>
   </div>
 
+  <!-- Language Selector Dropdown -->
+  <div class="language-selector">
+    <select class="btn-bd-primary" onchange="changeLanguage(this.value)">
+      <option value="es">ES</option>
+      <option value="en">EN</option>
+    </select>
+  </div>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand navbar-dark bg-dark data-bs-theme-value">
     <div class="container-fluid">
@@ -96,18 +104,22 @@
       </button>
 
       <div class="collapse navbar-collapse" id="vanBar">
-        <ul class="navbar-nav me-auto">
+        <ul class="navbar-nav me-auto" id="navBarList">
           <li class="nav-item">
-            <a class="nav-link" href="#mision">Mision</a>
+            <a class="nav-link lang" data-lang="es" href="#mision">Misión</a>
+            <a class="nav-link lang" data-lang="en" style="display: none;" href="#mision">Mision</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#vision">Vision</a>
+            <a class="nav-link lang" data-lang="es" href="#vision">Visión</a>
+            <a class="nav-link lang" data-lang="en" style="display: none;" href="#vision">Vision</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#values">Values</a>
+            <a class="nav-link lang" data-lang="es" href="#values">Valores</a>
+            <a class="nav-link lang" data-lang="en" style="display: none;" href="#values">Values</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact-us">Contact Us</a>
+            <a class="nav-link lang" data-lang="es" href="#contact-us">Contactanos</a>
+            <a class="nav-link lang" data-lang="en" style="display: none;" href="#contact-us">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -117,9 +129,12 @@
   <div class="b-divider"></div>
   <!-- Intro -->
   <div id="mision" class="px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold text-body-emphasis">Misión de Najon</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">En <najon>najon</najon>, nuestra misión es transformar la manera en que las empresas gestionan sus
+    <h1 class="display-5 fw-bold text-body-emphasis lang" data-lang="es">Misión</h1>
+    <h1 class="display-5 fw-bold text-body-emphasis lang" data-lang="en" style="display: none;">Mision</h1>
+    <br>
+    <div class="col-lg-6 mx-auto lang" data-lang="es">
+      <p class="lead mb-4">En <najon>najon</najon>, nuestra misión es transformar la manera en que las empresas
+        gestionan sus
         operaciones, fomentando la innovación y la eficiencia. Nos dedicamos a brindar soluciones estratégicas y
         dinámicas, adaptadas a las necesidades específicas de cada cliente, con el objetivo de impulsar su crecimiento y
         éxito sostenible en un entorno empresarial en constante evolución. Apostamos por ideas frescas y enfoques
@@ -127,14 +142,28 @@
         futuro más próspero y competitivo para nuestros clientes.
       </p>
     </div>
+    <div class="col-lg-6 mx-auto lang" data-lang="en" style="display: none;">
+      <p class="lead mb-4">At <najon>najon</najon>, our mission is to transform the way businesses manage their
+        operations by fostering
+        innovation and efficiency. We are dedicated to providing strategic and dynamic solutions tailored to the
+        specific needs of each client, with the goal of driving their growth and sustainable success in an ever-evolving
+        business environment. We are committed to fresh ideas and creative approaches to overcome challenges, maximize
+        opportunities, and minimize waste, thereby contributing to a more prosperous and competitive future for our
+        clients.
+
+      </p>
+    </div>
   </div>
 
   <div class="b-divider"></div>
   <!-- Vision -->
   <div id="vision" class="px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold text-body-emphasis">Visión de Najon</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">En <najon>najon</najon> aspiramos a ser la consultora de gestión líder y más innovadora del mercado,
+    <h1 class="display-5 fw-bold text-body-emphasis lang" data-lang="es">Visión</h1>
+    <h1 class="display-5 fw-bold text-body-emphasis lang" data-lang="en" style="display: none;">Vision</h1>
+    <br>
+    <div class="col-lg-6 mx-auto lang" data-lang="es">
+      <p class="lead mb-4">En <najon>najon</najon> aspiramos a ser la consultora de gestión líder y más innovadora del
+        mercado,
         reconocida por nuestra capacidad para transformar empresas a través de soluciones creativas y personalizadas.
         Nos comprometemos a ser el motor de cambio que impulsa a nuestros clientes a la excelencia, ayudándoles a
         adaptarse y prosperar en un entorno empresarial dinámico y en constante evolución. Nuestra visión es crear un
@@ -142,49 +171,122 @@
         de innovación y dinamismo en el sector.
       </p>
     </div>
-  </div>
+    <div class="col-lg-6 mx-auto lang" data-lang="en" style="display: none;">
+      <p class="lead mb-4">At <najon>najon</najon>, we aspire to be the leading and most innovative management
+        consulting firm in the
+        market, recognized for our ability to transform businesses through creative and customized solutions. We are
+        committed to being the driving force that propels our clients to excellence, helping them adapt and thrive in a
+        dynamic and ever-changing business environment. Our vision is to create a legacy of success and sustainability,
+        setting new standards in business management and becoming the benchmark for innovation and dynamism in the
+        industry.
 
-  <div class="b-divider"></div>
-  <!-- Values -->
-  <div id="values" class="px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold text-body-emphasis">Valores de Najon</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">
-      <ol type="1">
-        <li>
-          <b>Innovación:</b> Fomentamos un entorno donde las ideas nuevas y creativas son el motor de
-          nuestro éxito, buscando continuamente maneras innovadoras de abordar los desafíos empresariales.
-        </li>
-        <br>
-        <li>
-          <b>Excelencia:</b> Nos esforzamos por ofrecer soluciones de alta calidad que superen las expectativas de
-          nuestros
-          clientes, con un compromiso inquebrantable hacia la perfección en cada proyecto.
-        </li>
-        <br>
-        <li>
-          <b>Aaptabilidad:</b> Entendemos la importancia de ser flexibles y ágiles en un mundo empresarial en constante
-          cambio, y nos adaptamos rápidamente a las necesidades y condiciones del mercado y de nuestros clientes.
-        </li>
-        <br>
-        <li>
-          <b>Colaboración:</b> Creemos en el poder del trabajo en equipo, tanto internamente como con nuestros
-          clientes,
-          para co-crear soluciones efectivas y sostenibles.
-        </li>
-        <br>
-        <li>
-          <b>Integridad:</b> Operamos con transparencia, ética y confidencialidad en todas nuestras interacciones,
-          construyendo relaciones de confianza y respeto mutuo con nuestros clientes y socios.
-        </li>
-      </ol>
       </p>
     </div>
   </div>
 
   <div class="b-divider"></div>
+  <!-- Values -->
+  <div id="values" class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis lang" data-lang="es">Valores</h1>
+    <h1 class="display-5 fw-bold text-body-emphasis lang" data-lang="en" style="display: none;">Values</h1>
+    <br>
+    <div class="col-lg-6 mx-auto lang" data-lang="es">
+      <ol id="valuesList" type="1">
+        <li>
+          <p class="lead mb-4">
+            <b>Innovación:</b> Fomentamos un entorno donde las ideas nuevas y creativas son el motor de
+            nuestro éxito, buscando continuamente maneras innovadoras de abordar los desafíos empresariales.
+          </p>
+        </li>
+        <br>
+        <li>
+          <p class="lead mb-4">
+            <b>Excelencia:</b> Nos esforzamos por ofrecer soluciones de alta calidad que superen las expectativas de
+            nuestros
+            clientes, con un compromiso inquebrantable hacia la perfección en cada proyecto.
+          </p>
+        </li>
+        <br>
+        <li>
+          <p class="lead mb-4">
+            <b>Aaptabilidad:</b> Entendemos la importancia de ser flexibles y ágiles en un mundo empresarial en
+            constante
+            cambio, y nos adaptamos rápidamente a las necesidades y condiciones del mercado y de nuestros clientes.
+          </p>
+        </li>
+        <br>
+        <li>
+          <p class="lead mb-4">
+            <b>Colaboración:</b> Creemos en el poder del trabajo en equipo, tanto internamente como con nuestros
+            clientes,
+            para co-crear soluciones efectivas y sostenibles.
+          </p>
+        </li>
+        <br>
+        <li>
+          <p class="lead mb-4">
+            <b>Integridad:</b> Operamos con transparencia, ética y confidencialidad en todas nuestras interacciones,
+            construyendo relaciones de confianza y respeto mutuo con nuestros clientes y socios.
+          </p>
+        </li>
+      </ol>
+    </div>
+    <div class="col-lg-6 mx-auto lang" data-lang="en" style="display: none;">
+      <ol type="1">
+        <li>
+          <p class="lead mb-4">
+            <b>Innovation:</b> We foster an environment where new and creative ideas are the driving force behind our
+            success, continuously seeking innovative ways to address business challenges.
+          </p>
+        </li>
+        <br>
+        <li>
+          <p class="lead mb-4">
+            <b>Excellence:</b> We strive to deliver high-quality solutions that exceed our clients' expectations, with
+            an unwavering commitment to perfection in every project.
+          </p>
+        </li>
+        <br>
+        <li>
+          <p class="lead mb-4">
+            <b>Adaptability:</b> We understand the importance of being flexible and agile in a constantly changing
+            business world, and we quickly adapt to the needs and conditions of the market and our clients.
+          </p>
+        </li>
+        <br>
+        <li>
+          <p class="lead mb-4">
+            <b>Collaboration:</b> We believe in the power of teamwork, both internally and with our clients, to
+            co-create effective and sustainable solutions.
+          </p>
+        </li>
+        <br>
+        <li>
+          <p class="lead mb-4">
+            <b>Integrity:</b> We operate with transparency, ethics, and confidentiality in all our interactions,
+            building relationships of trust and mutual respect with our clients and partners.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="b-divider"></div>
   <!-- Contact us -->
-  <div id="contact-us" class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div id="contact-us" class="px-4 py-5 my-5 text-center">
+    <div id="values" class="px-4 py-5 my-5 text-center">
+      <h1 class="display-5 fw-bold text-body-emphasis lang" data-lang="es">Contactanos</h1>
+      <h1 class="display-5 fw-bold text-body-emphasis lang" data-lang="en" style="display: none;">Contact us</h1>
+      <br>
+      <div class="col-lg-6 mx-auto lang" data-lang="es">
+        <p class="lead mb-4 text-center">
+          <a href="mailto:consultas@najonsoluciones.com" style="color: inherit; text-decoration: inherit;">consultas@najonsoluciones.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Contact us -->
+  <!-- <div id="contact-us" class="container col-xl-10 col-xxl-8 px-4 py-5">
     <div class="row align-items-center g-lg-5 py-5">
       <div class="col-lg-7 text-center text-lg-start">
         <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Leave your question here</h1>
@@ -210,7 +312,7 @@
         </form>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="b-divider"></div>
 
@@ -243,6 +345,7 @@
     crossorigin="anonymous"></script>
   <script src="assets/js/color-modes.js"></script>
   <script src="form-submit.js"></script>
+  <script src="lang-select.js"></script>
   <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
